@@ -1,0 +1,22 @@
+server:
+  port: 2223
+  
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/susalud_ae_dev_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: "root"
+    password: "asd$123"
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  application:
+    name: seguridad-vitarrico
+      
+      
+security:
+  jwt:
+    token:
+      secret-key: jwtSusaludSecretKey
+      expire-length: 86400      
